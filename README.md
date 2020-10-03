@@ -1,2 +1,0 @@
-# HacktoberCodes
-Codes for Knowledge
