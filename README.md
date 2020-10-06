@@ -1,4 +1,4 @@
 # HacktoberCodes
-Codes for Knowledge
+Codes and algos for Knowledge
 
-Want some important codes for CP. Check out here
+Want some important codes for CP. Check out here!!!
