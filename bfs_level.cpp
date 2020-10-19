@@ -18,7 +18,6 @@ void bfs(vector <vector <long int> > adj,long int n,long int node,vector <long i
 	vector <bool> visited(n,false);
 	q.push(node);
 	visited[node]=true;
-//	cout<<node sp;
 	long int j = node;
 	level[node]=1;
 	while(!q.empty())
@@ -31,7 +30,6 @@ void bfs(vector <vector <long int> > adj,long int n,long int node,vector <long i
 				q.push(adj[j][i]);
 				visited[adj[j][i]]=true;
 				level[adj[j][i]] = level[j] + 1;
-//				cout<<adj[j][i] sp;
 			}
 		}
 		q.pop();
