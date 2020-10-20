@@ -4,12 +4,14 @@ using namespace std;
 
 void dfs(vector<vector<int>> g, int v, bool* visited, int vertex)
 {
-	visited[vertex] = true;
+	visited[vertex] = true;  // Mark the current node as visited and print it
 	cout << vertex << " ";
+	
+	// Recur for all the vertices adjacent to this vertex 
 	for (int i = 0; i < v; i++)
 	{
 		if (g[vertex][i] == 1 && !visited[i])
-			dfs(g, v, visited, i);
+			dfs(g, v, visited, i);  
 	}
 	return;
 }
@@ -18,7 +20,7 @@ int main()
 {
 	int v, e;
 	cin >> v >> e;
-	vector<vector<int>> g(v);
+	vector<vector<int>> g(v); //adjacency list
 	for (int i = 0; i < v; i++)
 	{
 		g[i].resize(v);
@@ -44,6 +46,7 @@ int main()
 	  
 	for (int i = 0; i < v; i++)
 	{
+		//call dfs for every vertex that is not visited
 		if (!visited[i])
 			dfs(g, v, visited, i);
 	}
