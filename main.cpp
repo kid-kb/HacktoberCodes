@@ -1,21 +1,15 @@
-#include<iostream>
-using namespace std;
+//
+//  main.cpp
+//  edit_distance
+//
+//  Created by Keshav Bhalla on 24/05/20.
+//  Copyright © 2020 Keshav Bhalla. All rights reserved.
+//
 
-int main()
-{
-    int n;
-    cin>>n;
-    int dp[n+1];
-    memset(dp,-1, sizeof(dp));
-    dp[1]=1;
-    dp[0]=0;
-    
-    for(int i=2;i<=n;i++)
-    {
-        dp[i]=dp[i-1]+dp[i-2];
-    }
-    
-    cout<<dp[n]<<endl;
+#include <iostream>
+
+int main(int argc, const char * argv[]) {
+    // insert code here...
+    std::cout << "Hello, World!\n";
     return 0;
 }
-
