@@ -1,3 +1,4 @@
+//count number of nodes on a given level
 #include<bits/stdc++.h>
 #define ull unsigned long long
 #define ll long long
@@ -17,7 +18,6 @@ void bfs(vector <vector <long int> > adj,long int n,long int node,vector <long i
 	vector <bool> visited(n,false);
 	q.push(node);
 	visited[node]=true;
-//	cout<<node sp;
 	long int j = node;
 	level[node]=1;
 	while(!q.empty())
@@ -30,7 +30,6 @@ void bfs(vector <vector <long int> > adj,long int n,long int node,vector <long i
 				q.push(adj[j][i]);
 				visited[adj[j][i]]=true;
 				level[adj[j][i]] = level[j] + 1;
-//				cout<<adj[j][i] sp;
 			}
 		}
 		q.pop();
@@ -41,7 +40,8 @@ int main()
 	long int n,m;
 	cin >> n ;
 	m = n-1;
-	vector <vector <long int> > adj(n);
+	vector <vector <long int> > adj(n); //adjacency list for the graph
+	//read 2 bidirectional connected vertices
 	f(i,0,m)
 	{
 		long int u,v;
@@ -51,12 +51,14 @@ int main()
 		adj[v].pb(u);
 	}
 	long int x,count=0;
-	cin >> x;
-	vector <long int> level(n,0);
-	bfs(adj,n,0,level);
+	cin >> x;  
+	vector <long int> level(n,0); //Initially mark the level of all vertices as 0
+	
+	bfs(adj,n,0,level); //call bfs to find level of each vertex
+	
 	f(i,0,n)
 		if(level[i]==x)
-			count++;
+			count++; //increase the count if the level matches the given level x
 	cout << count endl;
 	return 0;
 }

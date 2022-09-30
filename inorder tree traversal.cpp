@@ -69,3 +69,4 @@ int main()
     inOrder(root); 
     return 0; 
 } 
+//the inorder traversal of the given tree is :- 4 2 5 1 3
