@@ -1,6 +1,6 @@
 // 23 jan
 // Insertion Sort
-
+// kaisa hai bhai, sab theek. Dhyaan rakhi/
 #include <stdio.h>
 
 void insertion_sort(int arr[], int n);
